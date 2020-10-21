@@ -1,5 +1,5 @@
 from pyperclip import paste
-from os import system
+
 def get_links():
     """
     Function to get the link(s) for YoutubeDL.download
