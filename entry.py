@@ -7,4 +7,8 @@ system('cls')
 
 if __name__ == '__main__':
     with YoutubeDL(formats.AUDIO_MP3_192) as ydl:
-        ydl.download(helpers.get_links())
+        links = helpers.get_links()
+        if links:
+            ydl.download(links)
+        else:
+            print('Invalid or empty list file detected...')

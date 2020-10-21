@@ -1,16 +1,31 @@
-
+from pyperclip import paste
+from os import system
 def get_links():
-    vid_links = []
-    list_file = 'list.txt'
+    """
+    Function to get the link(s) for YoutubeDL.download
+    first it checks for a file list.txt and gets the links from it
+    if the file doesnt exist or the file doesnt have any links,
+    it gets the link from your clipboard
+    """
     from os import listdir
-    
+
+    list_file = 'list.txt'
+    links = []
     if list_file in listdir():
-        with open(list_file) as f:
-            vid_links = f.readlines()
-            return vid_links
+        filehandle = open(list_file)
+        links = filehandle.readlines()
+        filehandle.close()
+        if links:
+            return links
+        else:
+            return False
     else:
-        vid_links = input("Paste the video link: ")
-        return vid_links
+        clipboard_link = paste()
+        print(
+            f"Using {clipboard_link} from clipboard..."
+        )
+        links.append(clipboard_link)
+        return links
 
 class MyLogger(object):
     def debug(self, msg): pass
@@ -24,3 +39,8 @@ class MyLogger(object):
 def my_hook(d):
     if d['status'] == 'finished':
         print('Download Done. Converting...')
+    if d['status'] == 'downloading':
+        print(
+            f"Downloading {d['filename']} {d['_percent_str']} {d['_eta_str']}"
+        )
+        
