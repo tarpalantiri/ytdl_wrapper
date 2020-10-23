@@ -2,8 +2,7 @@
 
 ## Usage
 ## Option 1:
-### Create a "list.txt" file with links to youtube videos.
-###Each newline should be a link
+### Create a "list.txt" file with links to youtube videos. Each newline should be a link
 ```
 list.txt
 link
