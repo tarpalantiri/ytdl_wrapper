@@ -4,7 +4,7 @@
 ## Installation
 Download and run the program.
 
-	https://github.com/tarpalantiri/ytdl_wrapper/releases
+https://github.com/tarpalantiri/ytdl_wrapper/releases
 
 ## Usage
 ## Option 1:
