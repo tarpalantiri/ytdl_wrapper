@@ -1,5 +1,9 @@
 - ## Overview
 ytdl_wrapper is a a python script that uses the youtube_dl library to make it easy for people who want to download youtube content but dont want to learn commandline-fu.
+Its just a package that is compiled into an executable with Pyinstaller.
+
+- ## Support
+Currently only supports Windows.
 
 - ## Installation
 Download and run the program.
