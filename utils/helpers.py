@@ -14,7 +14,7 @@ def get_links_from_file():
                 cleaned_links.append(link.strip())
             return cleaned_links
     else:
-        return False
+        return False #IMPLEMENT LINK CHECKING IN THE FUTURE
 
 def get_links_from_clipboard():
     from pyperclip import paste
@@ -23,7 +23,7 @@ def get_links_from_clipboard():
     if 'http' in link:
         return [link]
     else:
-        return False
+        return False #IMPLEMENT LINK CHECKING IN THE FUTURE
 #-----------------------------------------------------------
 
 

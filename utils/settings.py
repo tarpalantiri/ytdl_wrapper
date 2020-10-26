@@ -22,6 +22,10 @@ Check https://github.com/tarpalantiri/ytdl_wrapper for usage and source :)
 2. GET LINKS FROM CLIPBOARD
 """
 
+ERROR_FILE = ""
+ERROR_FILE_LINK = ""
+ERROR_CLIPBOARD_LINK = ""
+
 AUDIO_MP3_192 = {
     'format' : 'bestaudio/best',
     'logger' : MyLogger(),
