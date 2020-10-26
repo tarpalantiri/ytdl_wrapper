@@ -6,9 +6,12 @@ from utils import settings, helpers
 system('cls')
 
 if __name__ == '__main__':
+    system('cls')
+    print(settings.GREET_MESSAGE)
+    option = input('[ 1/2 ] -> ')
     with YoutubeDL(settings.AUDIO_MP3_192) as ydl:
-        links = helpers.get_links()
-        if links:
-            ydl.download(links)
+        if option == 1:
+            links = helpers.get_links_from_file()
         else:
-            print('Invalid or empty list file detected...')
+            links = helpers.get_links_from_clipboard()
+        ydl.download(links)
